@@ -93,6 +93,8 @@ This notebook simply drops unneeded columns and consolidates data into one row p
 
 Import the csv created above into Excel.  I used this to rank players for each stat within each year (being mindful that tied players should have the same rank), then assign points according to the above criteria.  Keep only these awarded point columns and write out as pitching_phase3.csv
 
-#### Process in Excel
+#### pitching2_part3.ipynb  
 
-Import the csv created above into Excel.  I used this to rank players for each stat within each year (being mindful that tied players should have the same rank), then assign points according to the above criteria.  Keep only these awarded point columns and write out as pitching_phase3.csv
+Sum up players into one-line-per-career.  Use the HallOfFame file to identify Hall Of Fame inductees.  Then at this point, we arrive at the Logistic Regression Modeling and Fitting phase which aside from the selection of statistics is identical to the process for batters.  
+
+Interestingly, the stats with the highest coefficients were the same ones which the Gray Ink test assigned higher weight to (except that this model promotes Saves a little higher).  To avoid possible overfitting, I ran this process over again using only Wins, Saves, Strikeouts and ERA, which gave predicted results I consider reasonable.
